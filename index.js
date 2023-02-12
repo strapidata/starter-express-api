@@ -7,8 +7,18 @@ app.all('/', (req, res) => {
     console.log(response);
   })
   .catch(function (error) {
-    console.log("Unable to fetch -", err);
+    console.log("Unable to fetch 1 -", err);
   });
+    
+    fetch("https://app-abonos.herokuapp.com/categorias/?id=33")
+  .then((response) => {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log("Unable to fetch 2 -", err);
+  });
+    
+    
     
     console.log("Just got a request!")
     res.send('MCUADROS!')
